@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projetos — {{name}}</title>
+<meta name="description" content="Linha do tempo de projetos: nome, descrição, tecnologias, repositório e demonstração.">
+<meta name="theme-color" content="#059669">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='44' fill='%23059669'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="projects">
+
+<div id="site-header"></div>
+
+<main>
+  <section class="section first">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow" data-i18n="projectsEyebrow"></span>
+        <h2 data-i18n="projectsTitle"></h2>
+        <p data-i18n="projectsSubtitle"></p>
+      </div>
+
+      <div class="timeline" data-projects-list></div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="js/data.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/components.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

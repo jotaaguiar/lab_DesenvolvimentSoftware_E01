@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{name}} — Portfólio</title>
+<meta name="description" content="Portfólio profissional: formação, projetos, experiências e contato.">
+<meta name="theme-color" content="#059669">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='44' fill='%23059669'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="about">
+
+<div id="site-header"></div>
+
+<main>
+  <!-- ================= Hero ================= -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow" data-i18n="heroEyebrow"></span>
+        <h1 data-profile="name"></h1>
+        <p class="role" data-profile="role"></p>
+        <p class="location">
+          <span data-icon="pin" aria-hidden="true"></span>
+          <span data-profile="location"></span>
+        </p>
+        <div class="btn-row">
+          <a href="projetos.html" class="btn btn-primary" data-i18n="heroCta"></a>
+          <a href="contato.html" class="btn btn-outline" data-i18n="heroCtaSecondary"></a>
+        </div>
+      </div>
+      <div class="hero-photo-wrap">
+        <div class="hero-photo" data-profile="photo"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Sobre Mim ================= -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow" data-i18n="aboutEyebrow"></span>
+        <h2 data-i18n="aboutTitle"></h2>
+        <p data-i18n="aboutSubtitle"></p>
+      </div>
+
+      <div class="about-langs">
+        <article class="about-card reveal">
+          <h3 data-i18n="aboutTitlePt"></h3>
+          <p data-about="pt"></p>
+        </article>
+        <article class="about-card reveal">
+          <h3 data-i18n="aboutTitleEn"></h3>
+          <p data-about="en"></p>
+        </article>
+      </div>
+
+      <h3 class="subhead" data-i18n="skillsTitle"></h3>
+      <div class="chip-row" data-skills></div>
+
+      <h3 class="subhead" data-i18n="statsTitle"></h3>
+      <div class="stat-row" data-stats></div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="js/data.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/components.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

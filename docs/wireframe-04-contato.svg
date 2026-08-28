@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" width="1200" height="820" font-family="Inter, Segoe UI, Arial, sans-serif">
+  <defs>
+    <style>
+      .bg{fill:#ffffff}.line{stroke:#e6ebe8;stroke-width:1.5;fill:none}
+      .box{fill:#f0f3f1;stroke:#dde4e0;stroke-width:1.5}
+      .accent{fill:#059669}.accent-soft{fill:#ecfdf5;stroke:#a7f3d0;stroke-width:1.5}
+      .txt{fill:#5c6b64;font-size:13px}.txt-s{fill:#8b9a93;font-size:11px}
+      .title{fill:#0f1b16;font-weight:700}.ph{fill:#dde4e0}
+      .label{fill:#059669;font-size:11px;font-weight:700;letter-spacing:1.2px}
+      .input{fill:#f7f9f8;stroke:#dde4e0;stroke-width:1.5}
+    </style>
+  </defs>
+
+  <rect class="bg" width="1200" height="820"/>
+  <text x="40" y="34" class="title" font-size="15">WIREFRAME 04 — Contato (contato.html)</text>
+  <line x1="40" y1="46" x2="1160" y2="46" class="line"/>
+
+  <!-- Header -->
+  <rect x="40" y="70" width="1120" height="60" class="box" rx="8"/>
+  <circle cx="70" cy="100" r="6" class="accent"/>
+  <rect x="86" y="94" width="120" height="12" class="ph" rx="6"/>
+  <rect x="560" y="92" width="72" height="16" class="ph" rx="8"/>
+  <rect x="646" y="92" width="66" height="16" class="ph" rx="8"/>
+  <rect x="726" y="92" width="86" height="16" class="ph" rx="8"/>
+  <rect x="826" y="92" width="66" height="16" class="accent-soft" rx="8"/>
+  <rect x="1010" y="88" width="62" height="24" class="ph" rx="12"/>
+  <rect x="1082" y="88" width="24" height="24" class="ph" rx="12"/>
+
+  <!-- Titulo -->
+  <rect x="40" y="176" width="160" height="14" class="accent-soft" rx="7"/>
+  <rect x="40" y="204" width="220" height="30" class="ph" rx="6"/>
+  <rect x="40" y="248" width="640" height="12" class="ph" rx="6"/>
+
+  <!-- Coluna esquerda: canais clicaveis -->
+  <text x="40" y="304" class="label">CANAIS DIRETOS (ÍCONES CLICÁVEIS)</text>
+
+  <rect x="40" y="320" width="420" height="72" class="box" rx="12"/>
+  <rect x="62" y="340" width="40" height="40" class="accent-soft" rx="10"/>
+  <text x="118" y="350" class="label">E-MAIL</text>
+  <rect x="118" y="360" width="220" height="12" class="ph" rx="6"/>
+
+  <rect x="40" y="404" width="420" height="72" class="box" rx="12"/>
+  <rect x="62" y="424" width="40" height="40" class="accent-soft" rx="10"/>
+  <text x="118" y="434" class="label">WHATSAPP</text>
+  <rect x="118" y="444" width="180" height="12" class="ph" rx="6"/>
+
+  <rect x="40" y="488" width="420" height="72" class="box" rx="12"/>
+  <rect x="62" y="508" width="40" height="40" class="accent-soft" rx="10"/>
+  <text x="118" y="518" class="label">LINKEDIN</text>
+  <rect x="118" y="528" width="240" height="12" class="ph" rx="6"/>
+
+  <rect x="40" y="572" width="420" height="72" class="box" rx="12"/>
+  <rect x="62" y="592" width="40" height="40" class="accent-soft" rx="10"/>
+  <text x="118" y="602" class="label">GITHUB</text>
+  <rect x="118" y="612" width="200" height="12" class="ph" rx="6"/>
+
+  <!-- Coluna direita: formulario -->
+  <rect x="500" y="300" width="660" height="440" fill="#ffffff" stroke="#dde4e0" stroke-width="1.5" rx="18"/>
+  <rect x="534" y="330" width="220" height="20" class="ph" rx="5"/>
+
+  <text x="534" y="384" class="txt-s">Nome *</text>
+  <rect x="534" y="394" width="592" height="44" class="input" rx="12"/>
+
+  <text x="534" y="470" class="txt-s">E-mail *</text>
+  <rect x="534" y="480" width="592" height="44" class="input" rx="12"/>
+
+  <text x="534" y="556" class="txt-s">Mensagem *</text>
+  <rect x="534" y="566" width="592" height="100" class="input" rx="12"/>
+
+  <rect x="534" y="686" width="180" height="42" class="accent" rx="21"/>
+  <text x="566" y="712" fill="#ffffff" font-size="13" font-weight="600">Enviar mensagem</text>
+  <text x="736" y="712" class="txt-s">validação inline de campos obrigatórios e formato de e-mail</text>
+
+  <text x="40" y="784" class="txt-s">Envio: POST para endpoint de formulário (Formspree) quando configurado; caso contrário, fallback via mailto já funcional.</text>
+</svg>

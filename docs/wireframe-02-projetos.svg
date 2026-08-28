@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" font-family="Inter, Segoe UI, Arial, sans-serif">
+  <defs>
+    <style>
+      .bg{fill:#ffffff}.line{stroke:#e6ebe8;stroke-width:1.5;fill:none}
+      .box{fill:#f0f3f1;stroke:#dde4e0;stroke-width:1.5}
+      .accent{fill:#059669}.accent-soft{fill:#ecfdf5;stroke:#a7f3d0;stroke-width:1.5}
+      .txt{fill:#5c6b64;font-size:13px}.txt-s{fill:#8b9a93;font-size:11px}
+      .title{fill:#0f1b16;font-weight:700}.ph{fill:#dde4e0}
+      .label{fill:#059669;font-size:11px;font-weight:700;letter-spacing:1.2px}
+    </style>
+  </defs>
+
+  <rect class="bg" width="1200" height="900"/>
+  <text x="40" y="34" class="title" font-size="15">WIREFRAME 02 — Projetos (projetos.html) · linha do tempo</text>
+  <line x1="40" y1="46" x2="1160" y2="46" class="line"/>
+
+  <!-- Header -->
+  <rect x="40" y="70" width="1120" height="60" class="box" rx="8"/>
+  <circle cx="70" cy="100" r="6" class="accent"/>
+  <rect x="86" y="94" width="120" height="12" class="ph" rx="6"/>
+  <rect x="560" y="92" width="72" height="16" class="ph" rx="8"/>
+  <rect x="646" y="92" width="66" height="16" class="accent-soft" rx="8"/>
+  <rect x="726" y="92" width="86" height="16" class="ph" rx="8"/>
+  <rect x="826" y="92" width="66" height="16" class="ph" rx="8"/>
+  <rect x="1010" y="88" width="62" height="24" class="ph" rx="12"/>
+  <rect x="1082" y="88" width="24" height="24" class="ph" rx="12"/>
+
+  <!-- Titulo da secao -->
+  <rect x="40" y="176" width="150" height="14" class="accent-soft" rx="7"/>
+  <rect x="40" y="204" width="240" height="30" class="ph" rx="6"/>
+  <rect x="40" y="248" width="620" height="12" class="ph" rx="6"/>
+
+  <!-- Linha do tempo -->
+  <line x1="66" y1="310" x2="66" y2="860" stroke="#059669" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Card 1 -->
+  <circle cx="66" cy="340" r="9" fill="#ffffff" stroke="#059669" stroke-width="4"/>
+  <rect x="100" y="296" width="1060" height="180" class="box" rx="14"/>
+  <rect x="100" y="296" width="280" height="180" fill="#ecfdf5" stroke="#dde4e0" stroke-width="1.5" rx="14"/>
+  <text x="240" y="392" text-anchor="middle" class="txt-s">imagem / GIF do projeto</text>
+  <rect x="410" y="322" width="90" height="20" class="accent-soft" rx="10"/>
+  <text x="418" y="336" class="label">2025</text>
+  <rect x="410" y="356" width="200" height="20" class="ph" rx="5"/>
+  <rect x="410" y="390" width="700" height="10" class="ph" rx="5"/>
+  <rect x="410" y="408" width="640" height="10" class="ph" rx="5"/>
+  <rect x="410" y="434" width="64" height="20" class="box" rx="10"/>
+  <rect x="482" y="434" width="56" height="20" class="box" rx="10"/>
+  <rect x="546" y="434" width="80" height="20" class="box" rx="10"/>
+  <rect x="960" y="430" width="140" height="28" class="box" rx="14"/>
+  <text x="982" y="448" class="txt" font-size="11">Repositório GitHub</text>
+
+  <!-- Card 2 -->
+  <circle cx="66" cy="530" r="9" fill="#ffffff" stroke="#059669" stroke-width="4"/>
+  <rect x="100" y="486" width="1060" height="180" class="box" rx="14"/>
+  <rect x="100" y="486" width="280" height="180" fill="#ecfdf5" stroke="#dde4e0" stroke-width="1.5" rx="14"/>
+  <text x="240" y="582" text-anchor="middle" class="txt-s">imagem / GIF do projeto</text>
+  <rect x="410" y="512" width="120" height="20" class="accent-soft" rx="10"/>
+  <text x="418" y="526" class="label">2025 — ATUAL</text>
+  <rect x="410" y="546" width="170" height="20" class="ph" rx="5"/>
+  <rect x="410" y="580" width="700" height="10" class="ph" rx="5"/>
+  <rect x="410" y="598" width="600" height="10" class="ph" rx="5"/>
+  <rect x="410" y="624" width="64" height="20" class="box" rx="10"/>
+  <rect x="482" y="624" width="70" height="20" class="box" rx="10"/>
+  <rect x="560" y="624" width="90" height="20" class="box" rx="10"/>
+  <rect x="960" y="620" width="140" height="28" class="box" rx="14"/>
+  <text x="982" y="638" class="txt" font-size="11">Repositório GitHub</text>
+
+  <!-- Card 3 -->
+  <circle cx="66" cy="720" r="9" fill="#ffffff" stroke="#059669" stroke-width="4"/>
+  <rect x="100" y="676" width="1060" height="180" class="box" rx="14"/>
+  <rect x="100" y="676" width="280" height="180" fill="#ecfdf5" stroke="#dde4e0" stroke-width="1.5" rx="14"/>
+  <text x="240" y="772" text-anchor="middle" class="txt-s">imagem / GIF do projeto</text>
+  <rect x="410" y="702" width="90" height="20" class="accent-soft" rx="10"/>
+  <text x="418" y="716" class="label">2026</text>
+  <rect x="410" y="736" width="220" height="20" class="ph" rx="5"/>
+  <rect x="410" y="770" width="700" height="10" class="ph" rx="5"/>
+  <rect x="410" y="788" width="560" height="10" class="ph" rx="5"/>
+  <rect x="410" y="814" width="70" height="20" class="box" rx="10"/>
+  <rect x="488" y="814" width="60" height="20" class="box" rx="10"/>
+  <rect x="960" y="810" width="140" height="28" class="box" rx="14"/>
+  <text x="982" y="828" class="txt" font-size="11">Repositório GitHub</text>
+
+  <text x="100" y="884" class="txt-s">Cards renderizados por components.js a partir do array PROJECTS (data.js), do mais antigo para o mais recente.</text>
+</svg>

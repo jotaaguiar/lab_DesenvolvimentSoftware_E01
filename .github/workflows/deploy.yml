@@ -1,6 +1,8 @@
 # Publica o portfolio no GitHub Pages a cada push na branch main.
 #
-# Antes do primeiro deploy, no repositorio do GitHub:
+# O passo "Configure Pages" usa enablement: true, entao o proprio
+# workflow liga o Pages na primeira execucao. Se por algum motivo isso
+# falhar, basta ajustar manualmente no repositorio do GitHub:
 #   Settings > Pages > Build and deployment > Source: "GitHub Actions"
 #
 # O site e estatico (HTML/CSS/JS puro), entao nao ha etapa de build:
@@ -33,8 +35,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # enablement: true liga o GitHub Pages automaticamente na primeira
+      # execucao, sem precisar mexer em Settings > Pages antes.
       - name: Configure Pages
         uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

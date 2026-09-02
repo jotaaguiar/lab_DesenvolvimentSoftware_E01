@@ -52,7 +52,7 @@ const PROFILE = {
    --------------------------------------------------------- */
 const PROJECTS = [
   {
-    period: '2025',
+    period: '2026',
     name: 'PedaLa',
     description: {
       pt: 'Plataforma de assinatura de bicicletas urbanas desenvolvida em grupo na faculdade. Front-end SPA em HTML, CSS e JavaScript puro consumindo uma API REST escrita em Spring Boot, com autenticação e planos de assinatura.',
@@ -64,7 +64,7 @@ const PROJECTS = [
     media: 'assets/img/pedala.png',
   },
   {
-    period: '2025 — atual',
+    period: '2026',
     name: 'Fluxo',
     description: {
       pt: 'Aplicativo pessoal de controle financeiro. Importa extratos em OFX e CSV, gera relatórios em PDF, permite categorias customizadas, comparação entre meses, organização por tags e acompanhamento de recorrências fixas.',
@@ -86,18 +86,6 @@ const PROJECTS = [
     repo: '', // TODO: link do repositorio (se publico)
     demo: '',
     media: 'assets/img/pipeground.png',
-  },
-  {
-    period: '2026',
-    name: 'Portfólio Profissional',
-    description: {
-      pt: 'Este próprio site: portfólio profissional bilíngue (PT/EN) com tema claro e escuro, linha do tempo dinâmica de projetos, formação, certificações e formulário de contato validado. Construído sem frameworks, com HTML, CSS e JavaScript puro, e publicado no GitHub Pages.',
-      en: 'This very website: a bilingual (PT/EN) professional portfolio with light and dark themes, a dynamic project timeline, education, certifications and a validated contact form. Built with no frameworks, using plain HTML, CSS and JavaScript, and published on GitHub Pages.',
-    },
-    tech: ['HTML5', 'CSS3', 'JavaScript ES6+', 'Git', 'GitHub Pages'],
-    repo: 'https://github.com/jotaaguiar/lab_DesenvolvimentSoftware_E01',
-    demo: 'https://jotaaguiar.github.io/lab_DesenvolvimentSoftware_E01/',
-    media: 'assets/img/portfolio.png',
   },
 ];
 

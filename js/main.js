@@ -258,25 +258,52 @@ function initContactForm() {
       message: fields.message.value.trim(),
     };
 
+    /* So usa o back-end se houver endpoint E chave de acesso. Sem a
+       chave o servico recusaria a mensagem, entao e melhor cair direto
+       no fallback por mailto. */
+    const accessKey = typeof CONTACT_FORM_ACCESS_KEY !== 'undefined' ? CONTACT_FORM_ACCESS_KEY : '';
+    const podeUsarBackend = Boolean(CONTACT_FORM_ENDPOINT && accessKey);
+
     try {
-      if (CONTACT_FORM_ENDPOINT) {
+      if (podeUsarBackend) {
+        /* Envio real: o back-end de formulario entrega a mensagem na
+           caixa de entrada ligada a chave de acesso. */
+        const body = {
+          name: payload.name,
+          email: payload.email,
+          message: payload.message,
+          subject: `Contato via portfólio — ${payload.name}`,
+          from_name: 'Portfólio',
+        };
+        body.access_key = accessKey;
+
         const res = await fetch(CONTACT_FORM_ENDPOINT, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-          body: JSON.stringify(payload),
+          body: JSON.stringify(body),
         });
-        if (!res.ok) throw new Error('request failed');
-      } else if (!PROFILE.contact.email) {
-        /* Nem endpoint nem e-mail configurados em data.js. */
-        throw new Error('no contact channel configured');
-      } else {
-        /* Sem endpoint configurado: abre o cliente de e-mail com a
-           mensagem ja preenchida (envio por e-mail continua funcional). */
-        const subject = encodeURIComponent(`Contato via portfolio - ${payload.name}`);
+
+        /* Alguns servicos respondem HTTP 200 com {"success":"false"},
+           entao o status HTTP sozinho nao basta para dizer que deu certo. */
+        const data = await res.json().catch(() => null);
+        const ok = res.ok && (!data || String(data.success) !== 'false');
+        if (!ok) throw new Error((data && data.message) || 'request failed');
+
+        status.textContent = t('formSuccess', lang);
+      } else if (PROFILE.contact.email) {
+        /* Sem back-end configurado: da para abrir o app de e-mail do
+           visitante com a mensagem pronta, mas quem envia e ele. Nao
+           afirmamos que a mensagem chegou, porque nao chegou ainda. */
+        const subject = encodeURIComponent(`Contato via portfólio — ${payload.name}`);
         const body = encodeURIComponent(`${payload.message}\n\n--\n${payload.name} (${payload.email})`);
         window.location.href = `mailto:${PROFILE.contact.email}?subject=${subject}&body=${body}`;
+
+        status.textContent = t('formMailtoOpened', lang);
+      } else {
+        /* Nem endpoint nem e-mail configurados em data.js. */
+        throw new Error('no contact channel configured');
       }
-      status.textContent = t('formSuccess', lang);
+
       status.className = 'form-status success';
       form.reset();
       submitted = false;

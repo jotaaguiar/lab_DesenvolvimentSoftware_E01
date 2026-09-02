@@ -124,7 +124,7 @@ function experienceCard(exp, lang) {
   return `
     <article class="exp-card reveal">
       <div>
-        <span class="exp-period">${esc(exp.period)}</span>
+        ${periodBadge(exp.period)}
         <div class="exp-org">${esc(exp.org)}</div>
         ${exp.type ? `<div class="exp-type">${esc(exp.type[lang] || exp.type)}</div>` : ''}
       </div>
@@ -135,12 +135,17 @@ function experienceCard(exp, lang) {
     </article>`;
 }
 
+/* Campos vazios em data.js nao devem virar pilulas em branco. */
+function periodBadge(period) {
+  return period ? `<span class="exp-period">${esc(period)}</span>` : '';
+}
+
 /* ---------- Cartao de formacao academica ---------- */
 function educationCard(item, lang) {
   return `
     <article class="exp-card reveal">
       <div>
-        <span class="exp-period">${esc(item.period)}</span>
+        ${periodBadge(item.period)}
         <div class="exp-org">${esc(item.org)}</div>
       </div>
       <div>
@@ -162,7 +167,7 @@ function certificationCard(cert, lang) {
       <div class="cert-body">
         <h3>${esc(cert.name)}</h3>
         <div class="cert-issuer">${esc(cert.issuer)}</div>
-        <div class="cert-date">${esc(cert.date[lang])}</div>
+        ${cert.date[lang] ? `<div class="cert-date">${esc(cert.date[lang])}</div>` : ''}
         ${cert.credentialId ? `<div class="cert-id">${t('certCredential', lang)}: <code>${esc(cert.credentialId)}</code></div>` : ''}
         ${link ? `<div class="project-links">${link}</div>` : ''}
       </div>

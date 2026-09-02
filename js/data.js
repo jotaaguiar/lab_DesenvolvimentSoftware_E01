@@ -90,57 +90,17 @@ const PROJECTS = [
 ];
 
 /* ---------------------------------------------------------
-   3. EXPERIENCIAS — ordem do MAIS ANTIGO para o MAIS RECENTE
+   3. EXPERIENCIAS — ordem do MAIS RECENTE para o MAIS ANTIGO
    --------------------------------------------------------- */
 const EXPERIENCES = [
   {
-    period: 'mai 2022 — nov 2022',
-    org: 'TORA',
-    type: { pt: 'Estágio · Presencial · Contagem, MG', en: 'Internship · On-site · Contagem, MG' },
-    role: { pt: 'Estagiário de TI', en: 'IT Intern' },
-    description: {
-      pt: 'Suporte a sistemas e aplicações corporativas: SAP (ERP), Protheus (departamento pessoal), Senior (controle de acesso), SIT (TMS) e SILT (WMS). Participação em projetos de construção e melhoria de rede física, lógica, Wi-Fi e telefonia VOIP, além de levantamento e desenho de processos para automação das atividades do negócio.',
-      en: 'Support for corporate systems and applications: SAP (ERP), Protheus (HR), Senior (access control), SIT (TMS) and SILT (WMS). Took part in projects to build and improve physical, logical and Wi-Fi networks and VOIP telephony, as well as mapping and designing processes to automate business activities.',
-    },
-  },
-  {
-    period: 'ago 2022 — ago 2023',
-    org: 'PUC Minas',
-    type: { pt: 'Temporário · Presencial · Belo Horizonte, MG', en: 'Temporary · On-site · Belo Horizonte, MG' },
-    role: { pt: 'Monitor de Algoritmos e Estruturas de Dados I', en: 'Teaching Assistant — Algorithms and Data Structures I' },
-    description: {
-      pt: 'Monitoria da disciplina de Algoritmos e Estruturas de Dados I, apoiando os alunos em exercícios, dúvidas de programação e preparação para avaliações.',
-      en: 'Teaching assistant for Algorithms and Data Structures I, supporting students with exercises, programming questions and exam preparation.',
-    },
-  },
-  {
-    period: 'nov 2022 — abr 2023',
-    org: 'Soma Logística e Locações',
-    type: { pt: 'Tempo integral · Presencial · Contagem, MG', en: 'Full time · On-site · Contagem, MG' },
-    role: { pt: 'Técnico de Suporte em TI', en: 'IT Support Technician' },
-    description: {
-      pt: 'Suporte aos sistemas intranet, Benner, pacote Office e Google Workspace, lançamento de notas fiscais, manutenção e montagem de computadores, manutenção e configuração de rede (access points e switches) e criação de documentação de processos de TI.',
-      en: 'Support for intranet systems, Benner, Microsoft Office and Google Workspace, invoice entry, computer assembly and maintenance, network setup and maintenance (access points and switches), and writing IT process documentation.',
-    },
-  },
-  {
-    period: 'abr 2023 — mai 2025',
-    org: 'ArcelorMittal Sistemas',
+    period: 'nov 2025 — atual',
+    org: 'Guidance',
     type: { pt: 'Híbrido · Belo Horizonte, MG', en: 'Hybrid · Belo Horizonte, MG' },
     role: { pt: 'Data Engineer', en: 'Data Engineer' },
     description: {
-      pt: 'Atuação na plataforma Azure (Data Lake e Data Factory) e Databricks, com Python e Spark. Modelagem de dados, criação e gestão de pipelines de ETL, preparação de bases para aplicação de algoritmos de machine learning, análise exploratória, CI/CD e sustentação de sistemas e pipelines de execução em ambientes de big data, sob metodologia Scrum/Kanban.',
-      en: 'Worked on the Azure platform (Data Lake and Data Factory) and Databricks, with Python and Spark. Data modeling, building and managing ETL pipelines, preparing datasets for machine learning algorithms, exploratory data analysis, CI/CD and support of systems and execution pipelines in big data environments, under Scrum/Kanban.',
-    },
-  },
-  {
-    period: 'ago 2023 — jul 2024',
-    org: 'PUC Minas',
-    type: { pt: 'Temporário · Presencial · Belo Horizonte, MG', en: 'Temporary · On-site · Belo Horizonte, MG' },
-    role: { pt: 'Monitor de Banco de Dados', en: 'Teaching Assistant — Databases' },
-    description: {
-      pt: 'Monitoria da disciplina de Banco de Dados, com apoio aos alunos em modelagem, consultas SQL e gerenciamento de dados.',
-      en: 'Teaching assistant for the Databases course, supporting students with data modeling, SQL queries and data management.',
+      pt: 'Construção e manutenção de pipelines distribuídos no Databricks, aplicando a arquitetura medallion, integração com Unity Catalog e otimização de fluxos de dados em larga escala. Orquestração de pipelines complexos e automação de processos ETL/ELT com Airflow, pipelines de dados e armazenamento em Azure e AWS com foco em performance, escalabilidade, governança e segurança, além de CI/CD com Git e DevOps e condução de reuniões de levantamento de requisitos com clientes e stakeholders.',
+      en: 'Building and maintaining distributed pipelines on Databricks, applying the medallion architecture, integrating with Unity Catalog and optimizing large-scale data flows. Orchestration of complex pipelines and automation of ETL/ELT processes with Airflow, data pipelines and storage on Azure and AWS focused on performance, scalability, governance and security, plus CI/CD with Git and DevOps and leading requirements-gathering meetings with clients and stakeholders.',
     },
   },
   {
@@ -154,13 +114,53 @@ const EXPERIENCES = [
     },
   },
   {
-    period: 'nov 2025 — atual',
-    org: 'Guidance',
+    period: 'ago 2023 — jul 2024',
+    org: 'PUC Minas',
+    type: { pt: 'Temporário · Presencial · Belo Horizonte, MG', en: 'Temporary · On-site · Belo Horizonte, MG' },
+    role: { pt: 'Monitor de Banco de Dados', en: 'Teaching Assistant — Databases' },
+    description: {
+      pt: 'Monitoria da disciplina de Banco de Dados, com apoio aos alunos em modelagem, consultas SQL e gerenciamento de dados.',
+      en: 'Teaching assistant for the Databases course, supporting students with data modeling, SQL queries and data management.',
+    },
+  },
+  {
+    period: 'abr 2023 — mai 2025',
+    org: 'ArcelorMittal Sistemas',
     type: { pt: 'Híbrido · Belo Horizonte, MG', en: 'Hybrid · Belo Horizonte, MG' },
     role: { pt: 'Data Engineer', en: 'Data Engineer' },
     description: {
-      pt: 'Construção e manutenção de pipelines distribuídos no Databricks, aplicando a arquitetura medallion, integração com Unity Catalog e otimização de fluxos de dados em larga escala. Orquestração de pipelines complexos e automação de processos ETL/ELT com Airflow, pipelines de dados e armazenamento em Azure e AWS com foco em performance, escalabilidade, governança e segurança, além de CI/CD com Git e DevOps e condução de reuniões de levantamento de requisitos com clientes e stakeholders.',
-      en: 'Building and maintaining distributed pipelines on Databricks, applying the medallion architecture, integrating with Unity Catalog and optimizing large-scale data flows. Orchestration of complex pipelines and automation of ETL/ELT processes with Airflow, data pipelines and storage on Azure and AWS focused on performance, scalability, governance and security, plus CI/CD with Git and DevOps and leading requirements-gathering meetings with clients and stakeholders.',
+      pt: 'Atuação na plataforma Azure (Data Lake e Data Factory) e Databricks, com Python e Spark. Modelagem de dados, criação e gestão de pipelines de ETL, preparação de bases para aplicação de algoritmos de machine learning, análise exploratória, CI/CD e sustentação de sistemas e pipelines de execução em ambientes de big data, sob metodologia Scrum/Kanban.',
+      en: 'Worked on the Azure platform (Data Lake and Data Factory) and Databricks, with Python and Spark. Data modeling, building and managing ETL pipelines, preparing datasets for machine learning algorithms, exploratory data analysis, CI/CD and support of systems and execution pipelines in big data environments, under Scrum/Kanban.',
+    },
+  },
+  {
+    period: 'nov 2022 — abr 2023',
+    org: 'Soma Logística e Locações',
+    type: { pt: 'Tempo integral · Presencial · Contagem, MG', en: 'Full time · On-site · Contagem, MG' },
+    role: { pt: 'Técnico de Suporte em TI', en: 'IT Support Technician' },
+    description: {
+      pt: 'Suporte aos sistemas intranet, Benner, pacote Office e Google Workspace, lançamento de notas fiscais, manutenção e montagem de computadores, manutenção e configuração de rede (access points e switches) e criação de documentação de processos de TI.',
+      en: 'Support for intranet systems, Benner, Microsoft Office and Google Workspace, invoice entry, computer assembly and maintenance, network setup and maintenance (access points and switches), and writing IT process documentation.',
+    },
+  },
+  {
+    period: 'ago 2022 — ago 2023',
+    org: 'PUC Minas',
+    type: { pt: 'Temporário · Presencial · Belo Horizonte, MG', en: 'Temporary · On-site · Belo Horizonte, MG' },
+    role: { pt: 'Monitor de Algoritmos e Estruturas de Dados I', en: 'Teaching Assistant — Algorithms and Data Structures I' },
+    description: {
+      pt: 'Monitoria da disciplina de Algoritmos e Estruturas de Dados I, apoiando os alunos em exercícios, dúvidas de programação e preparação para avaliações.',
+      en: 'Teaching assistant for Algorithms and Data Structures I, supporting students with exercises, programming questions and exam preparation.',
+    },
+  },
+  {
+    period: 'mai 2022 — nov 2022',
+    org: 'TORA',
+    type: { pt: 'Estágio · Presencial · Contagem, MG', en: 'Internship · On-site · Contagem, MG' },
+    role: { pt: 'Estagiário de TI', en: 'IT Intern' },
+    description: {
+      pt: 'Suporte a sistemas e aplicações corporativas: SAP (ERP), Protheus (departamento pessoal), Senior (controle de acesso), SIT (TMS) e SILT (WMS). Participação em projetos de construção e melhoria de rede física, lógica, Wi-Fi e telefonia VOIP, além de levantamento e desenho de processos para automação das atividades do negócio.',
+      en: 'Support for corporate systems and applications: SAP (ERP), Protheus (HR), Senior (access control), SIT (TMS) and SILT (WMS). Took part in projects to build and improve physical, logical and Wi-Fi networks and VOIP telephony, as well as mapping and designing processes to automate business activities.',
     },
   },
 ];
@@ -213,10 +213,14 @@ const CERTIFICATIONS = [
 ];
 
 /* ---------------------------------------------------------
-   6. FORMULARIO DE CONTATO
+   6. FORMULARIO DE CONTATO — Web3Forms (https://web3forms.com)
    ---------------------------------------------------------
-   Deixe vazio para usar o fallback por mailto (ja funcional).
-   Para receber as mensagens por e-mail sem back-end, crie um
-   formulario gratuito em https://formspree.io e cole a URL aqui.
+   A chave de acesso e publica por design: ela nao da acesso a
+   nenhuma conta, so identifica para qual caixa de entrada a
+   mensagem vai. Por isso pode ficar no repositorio.
+   Cada pessoa precisa da PROPRIA chave, gerada em web3forms.com
+   com o seu e-mail.
+   Deixe a chave vazia para cair no fallback por mailto.
    --------------------------------------------------------- */
-const CONTACT_FORM_ENDPOINT = ''; // TODO: endpoint do Formspree
+const CONTACT_FORM_ENDPOINT = 'https://api.web3forms.com/submit';
+const CONTACT_FORM_ACCESS_KEY = '167a33bb-aaeb-4ba1-8bd9-38276b3a7411';

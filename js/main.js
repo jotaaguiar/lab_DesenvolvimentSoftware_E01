@@ -53,11 +53,18 @@ function fillProfileBasics() {
   document.querySelectorAll('[data-profile="location"]').forEach((el) => (el.textContent = PROFILE.location));
 
   document.querySelectorAll('[data-profile="photo"]').forEach((el) => {
-    if (PROFILE.photo) {
-      el.innerHTML = `<img src="${PROFILE.photo}" alt="${PROFILE.name}">`;
-    } else {
-      el.textContent = PROFILE.initials;
-    }
+    el.textContent = PROFILE.initials;
+    if (!PROFILE.photo) return;
+
+    /* So troca as iniciais pela foto depois que ela carrega de verdade.
+       Se o arquivo nao existir, o circulo verde com as iniciais fica. */
+    const img = new Image();
+    img.alt = PROFILE.name;
+    img.addEventListener('load', () => {
+      el.textContent = '';
+      el.appendChild(img);
+    });
+    img.src = PROFILE.photo;
   });
 
   const pinSlot = document.querySelector('[data-icon="pin"]');

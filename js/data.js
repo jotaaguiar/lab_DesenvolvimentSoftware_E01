@@ -16,9 +16,8 @@ const PROFILE = {
   name: 'João Paulo Aguiar Prado',
   initials: 'JP',
 
-  // TODO: colocar a foto em assets/img/perfil.jpg e trocar null pelo caminho.
-  // Enquanto for null, o site mostra as iniciais dentro do circulo verde.
-  photo: null,
+  // Se o arquivo nao existir, o site cai para as iniciais automaticamente.
+  photo: 'assets/img/perfil.jpg',
 
   role: {
     pt: 'Data Engineer | Azure · Databricks · PySpark · Airflow',
@@ -40,7 +39,7 @@ const PROFILE = {
   ],
 
   contact: {
-    email: 'joao.aguiar@guidance.dev',
+    email: 'aguiarpradojoaopaulo@gmail.com',
     whatsapp: '', // TODO: formato 55DDDNNNNNNNNN (ex.: 5531999998888). Vazio = card do WhatsApp nao aparece.
     linkedin: 'https://www.linkedin.com/in/joaoaguiarprado/',
     github: 'https://github.com/jotaaguiar',
@@ -60,9 +59,9 @@ const PROJECTS = [
       en: 'Urban bike subscription platform built as a college group project. Vanilla HTML, CSS and JavaScript SPA front-end consuming a Spring Boot REST API, with authentication and subscription plans.',
     },
     tech: ['HTML', 'CSS', 'JavaScript', 'Java 17', 'Spring Boot', 'Azure SQL'],
-    repo: '', // TODO: link do repositorio no GitHub
+    repo: 'https://github.com/jotaaguiar/pedalando',
     demo: '',
-    media: null, // TODO: assets/img/pedala.png (o projeto nao esta mais na maquina local)
+    media: 'assets/img/pedala.png',
   },
   {
     period: '2025 — atual',

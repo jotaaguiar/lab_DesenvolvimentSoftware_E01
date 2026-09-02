@@ -81,6 +81,7 @@ Imagens capturadas com os projetos rodando localmente:
 
 | Projeto | Tela |
 |---------|------|
+| **PedaLa** — landing page de assinatura | ![PedaLa](assets/img/pedala.png) |
 | **Fluxo** — tela de login | ![Fluxo](assets/img/fluxo.png) |
 | **PipeGround** — dashboard de produção | ![PipeGround](assets/img/pipeground.png) |
 | **PipeGround** — kanban de chão de fábrica | ![PipeGround Kanban](assets/img/pipeground-kanban.png) |
@@ -139,7 +140,7 @@ O projeto foi construído **sem frameworks e sem gerenciador de pacotes**: não 
 |------|------|--------|
 | Inter | Fonte | Google Fonts (via CDN, com fallback de sistema) |
 | Ícones (e-mail, WhatsApp, LinkedIn, GitHub, certificado, link) | SVG inline | Escritos no próprio projeto, em `js/components.js` |
-| `actions/checkout`, `actions/configure-pages`, `actions/upload-pages-artifact`, `actions/deploy-pages` | GitHub Actions | Usadas apenas no pipeline de deploy |
+| `actions/checkout` | GitHub Action | Usada apenas no pipeline de deploy |
 | [Formspree](https://formspree.io) | Serviço externo opcional | Recebimento das mensagens do formulário por e-mail |
 
 > Sem o Formspree configurado, o formulário continua funcional: após a validação ele monta a mensagem e abre o cliente de e-mail do usuário via `mailto`.
@@ -171,7 +172,9 @@ lab_DesenvolvimentSoftware_E01/
 │   └── main.js             # Inicialização: tema, navegação, renderização, formulário
 │
 ├── assets/
-│   └── img/                # Imagens dos projetos em execução
+│   └── img/                # Foto de perfil e imagens dos projetos em execução
+│       ├── perfil.jpg
+│       ├── pedala.png
 │       ├── fluxo.png
 │       ├── pipeground.png
 │       ├── pipeground-kanban.png
@@ -218,25 +221,29 @@ Depois acesse `http://localhost:5500`.
 
 ## Hospedagem e deploy
 
-O site está hospedado no **GitHub Pages** e o deploy é automático.
+O site está hospedado no **GitHub Pages**, servido a partir da branch `gh-pages`, e o deploy é automático.
 
 ### Como funciona
 
-Todo push na branch `main` dispara o workflow [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml), que publica o repositório inteiro no GitHub Pages. Como o site é estático, não existe etapa de build.
+O site é estático e o repositório inteiro é o site, então não existe etapa de build. Todo push na branch `main` dispara o workflow [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml), que apenas espelha a `main` na branch `gh-pages`, que é a branch que o Pages publica.
 
-### Configuração inicial (feita uma única vez)
+### Por que não usar `actions/deploy-pages`
 
-1. No repositório do GitHub, acesse **Settings → Pages**.
-2. Em **Build and deployment → Source**, selecione **GitHub Actions**.
-3. Faça um push na `main` (ou rode o workflow manualmente em **Actions → Deploy to GitHub Pages → Run workflow**).
+O fluxo oficial de Pages via Actions depende da API *create a Pages site*, e o `GITHUB_TOKEN` padrão não tem permissão para chamá-la. O deploy falhava com:
 
-O endereço publicado aparece ao final da execução do workflow e em **Settings → Pages**.
+```
+Error: Create Pages site failed. Error: Resource not accessible by integration
+```
 
-### Alternativa sem GitHub Actions
+Publicar pela branch `gh-pages` resolve isso: não exige nenhuma permissão além de `contents: write`, que o token padrão já tem.
 
-Também é possível publicar direto de uma branch: em **Settings → Pages → Source**, escolha **Deploy from a branch**, com branch `main` e pasta `/ (root)`. Nesse caso o workflow pode ser removido.
+### Reproduzir a configuração em outro repositório
 
----
+```bash
+git push origin main:gh-pages
+```
+
+O GitHub habilita o Pages automaticamente ao detectar a branch `gh-pages` em um repositório público. A partir daí o workflow mantém a branch atualizada sozinho.
 
 ## Arquitetura do front-end
 

@@ -1,12 +1,14 @@
 # Publica o portfolio no GitHub Pages a cada push na branch main.
 #
-# O passo "Configure Pages" usa enablement: true, entao o proprio
-# workflow liga o Pages na primeira execucao. Se por algum motivo isso
-# falhar, basta ajustar manualmente no repositorio do GitHub:
-#   Settings > Pages > Build and deployment > Source: "GitHub Actions"
+# Como funciona: o site e estatico e o repositorio inteiro e o site,
+# entao o workflow so espelha a main na branch gh-pages, que e a branch
+# que o GitHub Pages serve.
 #
-# O site e estatico (HTML/CSS/JS puro), entao nao ha etapa de build:
-# o repositorio inteiro e publicado como esta.
+# Por que nao usar actions/deploy-pages: aquele fluxo depende da API
+# "create a Pages site", e o GITHUB_TOKEN padrao nao tem permissao para
+# isso. O deploy falhava com "Resource not accessible by integration".
+# Publicar via branch gh-pages nao precisa de nenhuma permissao extra
+# alem de contents: write.
 
 name: Deploy to GitHub Pages
 
@@ -16,9 +18,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 # Um deploy por vez; nao cancela um deploy ja em andamento.
 concurrency:
@@ -28,25 +28,17 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
-
-      # enablement: true liga o GitHub Pages automaticamente na primeira
-      # execucao, sem precisar mexer em Settings > Pages antes.
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
+        uses: actions/checkout@v5
         with:
-          enablement: true
+          fetch-depth: 0
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: .
+      - name: Espelhar main na branch gh-pages
+        run: git push origin HEAD:gh-pages --force
 
-      - name: Deploy
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Resumo
+        run: |
+          echo "### Portfolio publicado :rocket:" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "https://${GITHUB_REPOSITORY_OWNER}.github.io/${GITHUB_REPOSITORY#*/}/" >> "$GITHUB_STEP_SUMMARY"

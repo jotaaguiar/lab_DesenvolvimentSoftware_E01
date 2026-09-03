@@ -780,7 +780,7 @@ p { margin: 0; }
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 16px;
 }
 .site-footer p { font-size: 13.5px; color: var(--text-faint); }

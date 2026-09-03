@@ -75,8 +75,6 @@ const UI_STRINGS = {
     formNote: 'Seus dados são usados apenas para responder ao contato.',
 
     /* Rodape */
-    footerBuilt: 'Desenvolvido para o Laboratório de Projeto de Software — PUC Minas.',
-    footerRights: 'Todos os direitos reservados.',
     themeToggle: 'Alternar tema',
   },
 
@@ -150,8 +148,6 @@ const UI_STRINGS = {
     formNote: 'Your data is used only to reply to your message.',
 
     /* Footer */
-    footerBuilt: 'Built for the Software Project Lab — PUC Minas.',
-    footerRights: 'All rights reserved.',
     themeToggle: 'Toggle theme',
   },
 };

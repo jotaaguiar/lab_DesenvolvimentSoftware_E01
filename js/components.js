@@ -81,10 +81,6 @@ function renderFooter() {
   mount.outerHTML = `
     <footer class="site-footer">
       <div class="container footer-inner">
-        <div>
-          <p data-i18n="footerBuilt"></p>
-          <p>&copy; ${new Date().getFullYear()} ${esc(PROFILE.name)}. <span data-i18n="footerRights"></span></p>
-        </div>
         <div class="footer-social">${social}</div>
       </div>
     </footer>`;

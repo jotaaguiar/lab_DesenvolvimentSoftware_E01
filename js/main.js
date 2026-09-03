@@ -274,6 +274,9 @@ function initContactForm() {
           message: payload.message,
           subject: `Contato via portfólio — ${payload.name}`,
           from_name: 'Portfólio',
+          /* Faz o "Responder" do cliente de e-mail ir direto para o
+             visitante, e nao para o remetente do servico. */
+          replyto: payload.email,
         };
         body.access_key = accessKey;
 
